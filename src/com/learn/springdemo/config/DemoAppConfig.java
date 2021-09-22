@@ -21,6 +21,37 @@ public class DemoAppConfig implements WebMvcConfigurer{
 	// define a bean for ViewResolver
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Bean
+	public Map<String, String> operatingSystemsOptions() throws Exception {
+		try(InputStream inputStream = getClass().getClassLoader().getResourceAsStream("../systems.properties")) {
+			//load props file
+			Properties props = new Properties();
+			props.load(inputStream);
+			
+			// populate map with info from props
+			Map<String, String> data = new TreeMap<String, String>((Map) props);
+			
+			return data;
+		}
+	}
+	
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Bean
+	public Map<String, String> favouriteLanguageOptions() throws Exception {
+		try(InputStream inputStream = getClass().getClassLoader().getResourceAsStream("../languages.properties")) {
+			//load props file
+			Properties props = new Properties();
+			props.load(inputStream);
+			
+			// populate map with info from props
+			Map<String, String> data = new TreeMap<String, String>((Map) props);
+			
+			return data;
+		}
+	}
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Bean
 	public Map<String, String> countryOptions() throws Exception {
 		try(InputStream inputStream = getClass().getClassLoader().getResourceAsStream("../countries.properties")) {
 			//load props file

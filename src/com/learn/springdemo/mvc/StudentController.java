@@ -1,5 +1,6 @@
 package com.learn.springdemo.mvc;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,12 @@ public class StudentController {
 	@Autowired
 	private Map<String, String> countryOptions;
 	
+	@Autowired
+	private Map<String, String> favouriteLanguageOptions;
+	
+	@Autowired
+	private Map<String, String> operatingSystemsOptions;
+	
 	@RequestMapping("/showForm")
 	public String showForm(Model theModel){
 		
@@ -27,6 +34,10 @@ public class StudentController {
 		theModel.addAttribute("student", theStudent);
 		
 		theModel.addAttribute("theCountryOptions", countryOptions);
+		
+		theModel.addAttribute("theFavouriteLanguageOptions", favouriteLanguageOptions);
+		
+		theModel.addAttribute("theOperatingSystemsOptions", operatingSystemsOptions);
 		
 		return "student-form";
 	}

@@ -13,8 +13,51 @@ public class Student {
 	
 	private String country;
 	
+	private String favouriteLanguage;
 	
-//	private LinkedHashMap<String, String> countryOptions;
+	private String operatingSystems;
+	
+	private LinkedHashMap<String, String> operatingSystemsOptions;
+	
+	public LinkedHashMap<String, String> getOperatingSystemsOptions() {
+		return operatingSystemsOptions;
+	}
+	
+	/*public Student(){
+		operatingSystemsOptions = new LinkedHashMap();
+		
+		operatingSystemsOptions.put("Linux", "Linux");
+		operatingSystemsOptions.put("MAC OS", "MAC OS");
+		operatingSystemsOptions.put("Windows OS", "Windows OS");
+	}*/
+	
+	/*private LinkedHashMap<String, String> favouriteLanguageOptions;
+	
+	public Student(){
+		favouriteLanguageOptions = new LinkedHashMap<String, String>();
+		
+		favouriteLanguageOptions.put("Java", "Java");
+		favouriteLanguageOptions.put("C#", "C#");
+		favouriteLanguageOptions.put("PHP", "PHP");
+		favouriteLanguageOptions.put("Ruby", "Ruby");
+		favouriteLanguageOptions.put("Python", "Python");
+		
+	}
+	
+	public LinkedHashMap<String, String> getFavouriteLanguageOptions() {
+		return favouriteLanguageOptions;
+	}*/
+	
+	
+	public String getOperatingSystems() {
+		return operatingSystems;
+	}
+
+	public void setOperatingSystems(String operatingSystems) {
+		this.operatingSystems = operatingSystems;
+	}
+
+	//	private LinkedHashMap<String, String> countryOptions;
 //	
 //	public Student(){
 //		
@@ -30,6 +73,14 @@ public class Student {
 //	
 	public String getCountry() {
 		return country;
+	}
+
+	public String getFavouriteLanguage() {
+		return favouriteLanguage;
+	}
+
+	public void setFavouriteLanguage(String favouriteLanguage) {
+		this.favouriteLanguage = favouriteLanguage;
 	}
 
 	public void setCountry(String country) {
