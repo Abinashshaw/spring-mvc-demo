@@ -21,6 +21,10 @@
 
 <br><br>
 
+<a href="customer/showForm">Customer Page</a>
+
+<br><br>
+
 <img src="/spring-mvc-demo/urlresources/images/spring-logo.png" >
 
 <br><br>
